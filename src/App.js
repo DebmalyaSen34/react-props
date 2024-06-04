@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import Card from './Card';
+import contacts from './contacts';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="heading">
+      <h1 className='heading'>My contacts</h1>
+      <Card 
+      name={contacts[0].name}
+      source={contacts[0].imgURL}
+      cell={contacts[0].phone}
+      email={contacts[0].email} />
+      <Card 
+      name={contacts[1].name}
+      source={contacts[1].imgURL}
+      cell={contacts[1].phone}
+      email={contacts[1].email} />
+      <Card 
+      name={contacts[2].name}
+      source={contacts[2].imgURL}
+      cell={contacts[2].phone}
+      email={contacts[2].email} />
     </div>
   );
 }
